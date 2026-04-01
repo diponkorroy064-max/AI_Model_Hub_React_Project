@@ -10,10 +10,11 @@ const Tool = ({ modelPromise, carts, setCarts }) => {
     const [activeModel, setActiveModel] = useState("model");
 
     return (
-        <div className='max-w-300 m-auto'>
+        <div className='max-w-300 m-auto mb-10'>
+
             <div className='flex justify-center gap-20 my-12'>
-                <button onClick={() => setActiveModel("model")} className='btn btn-soft btn-secondary w-50 rounded-full shadow'>Models</button>
-                <button onClick={()=>{setActiveModel("cart")}} className='btn w-50 rounded-full shadow'>Cart({carts.length})</button>
+                <button onClick={() => setActiveModel("model")} className={`btn w-50 rounded-full shadow ${activeModel=="model"? "btn-primary":"btn-neutral"}`}>Models</button>
+                <button onClick={() => { setActiveModel("cart") }} className={`btn w-50 rounded-full shadow ${activeModel=="cart"? "btn-primary":"btn-neutral"}`}>Cart({carts.length})</button>
             </div>
 
             <div className='mb-10'>
