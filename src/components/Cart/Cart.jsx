@@ -20,30 +20,36 @@ const Cart = ({ carts, setCarts }) => {
             <div>
                 <h1 className='text-3xl font-bold'>Your Card</h1>
             </div>
+
             <div className='space-y-6'>
                 {
                     carts.length === 0 ? (<p className='text-center text-2xl'>Cart is Empty</p>) : (
                         carts.map(obj =>
-                            <div className='flex justify-around items-center border-2 border-gray-400 bg-gray-200 rounded-2xl shadow p-6' key={obj.id}>
-                                <div>
-                                    <img className='w-30' src={obj.image} alt="" />
+                            <div className='flex justify-between items-center border-2 border-gray-400 bg-gray-200 rounded-2xl shadow p-6' key={obj.id}>
+
+                                <div className='border-blue-300 border-2 rounded-2xl p-2 bg-amber-200'>
+                                    <img className='w-25' src={obj.image} alt="" />
                                 </div>
-                                <div>
-                                    <h1>{obj.title}</h1>
+
+                                <div className='ml-4'>
+                                    <h1 className='text-2xl font-bold'>{obj.title}</h1>
                                     <p>{obj.description}</p>
                                 </div>
-                                <div>
-                                    <h1>${obj.price}</h1>
-                                    <h1>per month</h1>
+
+                                <div className=''>
+                                    <h1 className='text-3xl font-bold'>${obj.price}</h1>
+                                    <h1 className='text-[14px]'>per month</h1>
                                 </div>
+
                                 <div>
-                                    <button onClick={()=>handleDelete(obj)} className='text-2xl btn btn-ghost'><RxCross1 /></button>
+                                    <button onClick={()=>handleDelete(obj)} className='text-2xl btn btn-ghost hover:text-red-500'><RxCross1 /></button>
                                 </div>
                             </div>
                         )
                     )
                 }
             </div>
+            
             <div className='flex justify-between px-10 py-8 bg-black text-white rounded-2xl'>
                 <span className='text-3xl font-bold'>Total</span>
                 <span className='text-3xl font-bold'>$<span>{totalPrice}</span></span>
@@ -56,3 +62,4 @@ const Cart = ({ carts, setCarts }) => {
 };
 
 export default Cart;
+

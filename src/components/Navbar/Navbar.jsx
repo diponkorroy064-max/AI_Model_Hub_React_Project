@@ -4,7 +4,7 @@ import { BsCart2 } from "react-icons/bs";
 
 const Navbar = () => {
     return (
-        <div className='flex justify-between items-center max-w-300 m-auto px-10 py-8 bg-amber-100'>
+        <div className='flex justify-between items-center max-w-300 m-auto px-10 py-3 bg-amber-100'>
             <div className='flex gap-2.5'>
                 <div><img className='w-8 h-8' src={logo} alt="txt" /></div>
                 <h1 className='text-2xl font-bold'>AI Hub</h1>

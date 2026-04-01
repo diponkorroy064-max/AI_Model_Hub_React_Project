@@ -39,7 +39,7 @@ const ToolCard = ({ tool, carts, setCarts }) => {
                 <h4 className='text-2xl font-bold'>$ <span>{tool.price}</span>/month</h4>
 
                 <div>
-                    <button onClick={handleSubscribe} className='btn btn-secondary w-full'>{isSubscribe? "Subscribed":"Subscribe Now"}</button>
+                    <button onClick={handleSubscribe} className={`btn w-full ${isSubscribe? "btn-secondary":"btn-primary"}`}>{isSubscribe? "Subscribed":"Subscribe Now"}</button>
                 </div>
             </div>
         </div>

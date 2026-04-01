@@ -9,7 +9,6 @@ const Tool = ({ modelPromise, carts, setCarts }) => {
 
     const [activeModel, setActiveModel] = useState("model");
 
-
     return (
         <div className='max-w-300 m-auto'>
             <div className='flex justify-center gap-20 my-12'>
